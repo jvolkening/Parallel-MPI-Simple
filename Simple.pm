@@ -6,7 +6,7 @@ use vars qw(@ISA $VERSION);
 use Storable qw(nfreeze thaw);
 
 @ISA = qw(DynaLoader);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 bootstrap Parallel::MPI::Simple;
 

@@ -78,7 +78,7 @@ SV* _Recv (int source, int tag, SV*comm, SV*status) {
 
 /* Calls MPI_Init with dummy arguments, a bit dodgy but sort of ok */
 int Init () {
-  MPI_Init((int) NULL, (char ***)NULL);
+  MPI_Init(&PL_origargc, &PL_origargv);
 }
 
 /* Returns rank of process within comm */
