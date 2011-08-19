@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Parallel-MPI-Simple
-version:            0.05
+version:            0.10
 abstract:           ~
 author:  []
 license:            unknown
