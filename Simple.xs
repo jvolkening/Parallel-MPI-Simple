@@ -68,7 +68,7 @@ SV* _Recv (int source, int tag, SV*comm, SV*status) {
   MPI_Recv(len_buf, 1, MPI_INT, source, tag, (MPI_Comm)SvIVX(comm), &tstatus);
   recv_buf = (char*)malloc((len_buf[0]+1)*sizeof(char));
   if (recv_buf == NULL) croak("Allocation error in _Recv");
-  MPI_Recv(recv_buf, len_buf[0], MPI_CHAR, source, tag,
+  MPI_Recv(recv_buf, len_buf[0], MPI_CHAR, tstatus.MPI_SOURCE, tstatus.MPI_TAG,
 	    (MPI_Comm)SvIVX(comm), &tstatus);
   rval = newSVpvn(recv_buf, len_buf[0]);
   sv_setiv(status, tstatus.MPI_SOURCE);

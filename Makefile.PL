@@ -80,4 +80,5 @@ WriteMakefile(
     'PREREQ_PM' => {Storable => 0},
     'LIBS' => $libs || "-lmpi",
     'CCFLAGS' => $ccflags || "",
+    'CC' => 'mpicc',
 );

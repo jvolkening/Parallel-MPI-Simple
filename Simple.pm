@@ -8,6 +8,9 @@ use Storable qw(nfreeze thaw);
 @ISA = qw(DynaLoader);
 $VERSION = '0.10';
 
+# this patch enables RTLD_GLOBAL loading of symbols
+sub dl_load_flags { 0x01 }
+
 bootstrap Parallel::MPI::Simple;
 
 # evil, but makes everything MPI_*, which is sort of expected
