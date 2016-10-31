@@ -6,7 +6,7 @@ use vars qw(@ISA $VERSION);
 use Storable qw(nfreeze thaw);
 
 @ISA = qw(DynaLoader);
-$VERSION = '0.10';
+$VERSION = '0.101';
 
 # this patch enables RTLD_GLOBAL loading of symbols
 sub dl_load_flags { 0x01 }
