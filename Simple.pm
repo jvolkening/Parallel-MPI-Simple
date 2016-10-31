@@ -50,7 +50,7 @@ sub import {
    my $msg = MPI_Recv(1, 123, MPI_COMM_WORLD);
    print "$rank received: '$msg'\n";
  }
- MPI_Finalise();
+ MPI_Finalize();
 
 =head1 COMPILING AND RUNNING
 
